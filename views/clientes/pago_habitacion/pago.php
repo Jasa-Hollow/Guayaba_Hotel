@@ -33,11 +33,11 @@
 
     // Parámetros de la función insertUser, siendo los campos de cada una de las tablas.
         $campos1 = "id_fecha, fecha_inicial, fecha_final, fecha_cancelacion";
-        $campos2 = "id_reserva, Ncuenta, id_cliente, id_pago, id_habitacion, id_fecha";
+        $campos2 = "id_reserva, Ncuenta, id_cliente, id_pago, id_habitacion, id_fecha, estado";
 
     // Parámetros de la función insertUser, siendo el valor almacenado en las variables, y los que se insertarán en los campos.
         $valores1 = "'$id_fecha','$fechaEntrada','$fechaSalida','NULL'";
-        $valores2 = "'NULL','$Ncuenta','$id_cliente','$id_pago','$id_habitacion','$id_fecha'";
+        $valores2 = "'NULL','$Ncuenta','$id_cliente','$id_pago','$id_habitacion','$id_fecha', 1";
 
     // ---------------------------------------------------------------------------------
     // Se ejecuta la función para insertar en la tabla "fecha" y la tabla "reserva".
@@ -53,7 +53,7 @@
                 <div class="jumbotron text-center">
                     <h2 class="disply-4">¡Gracias por su reservar con nosotros!</h2>
                     <hr class="my-4">
-                    <p>La informacion de la reserva se ha registrado, puede cancelar la habitación sí lo desea antes de la fecha inicial de su estadía.<br/>
+                    <p>La información de la reserva se ha registrado, puede cancelar la habitación sí lo desea antes de la fecha inicial de su estadía.<br/>
                         <strong>(Para aclaraciones o consultas: guayabahotel@gmail.com)</strong>
                     </p>
                 </div>
@@ -66,6 +66,8 @@
         </div>';
     }
     else {
-        echo '<div class="alert alert-danger">...Error al registrar su información...</div>';
+        echo '
+        <script type="text/javascript"> swal("Estimado cliente: '. $user .'", "¡Ha ocurrido un error, inténtelo más tarde!", "error"); </script>
+        <div class="alert alert-danger">...Error al registrar su información...</div>';
     }
 ?>

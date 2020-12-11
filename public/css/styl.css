@@ -1,0 +1,115 @@
+body{
+    font-family: 'Abril Fatface', cursive;
+}
+
+.imagen{
+    width: 100%;
+    height: 90vh;
+    background-image: url(../img/hotel-1623064_1920.jpg);
+    text-align: center;
+}
+.capa{
+    width: 100%;
+    height: 120vh;
+    background: rgb(111, 222, 111, 0.4);
+}
+.imagen2{
+    padding-top: 15vh;
+}
+.title{
+    font-size: 50px;
+    color: white;
+}
+.contenedor{
+    padding: 0 10em;
+}
+
+.cap1{
+    width:100%;
+    height: 160vh;
+    background: #B5E6A0;
+    padding: 1em;
+    padding-left: 40vh;
+}
+
+#register{
+    padding-top: 50px;
+    margin-right: auto; margin-left: auto;
+}
+
+/* ---------------------------------------------------------- */
+#contenroom{
+  height: auto;
+  padding-top: 10vh; padding-bottom: 6vh;
+  background-image: url(../img/hotel-0000-0002.jpg);
+}
+
+#cr{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+  opacity: 0.8;
+}
+/* ---------------------------------------------------------- */
+
+
+/*Estilo de la barra*/
+
+.font-barra {
+    top: 82px;
+    left: 0;
+    background-image: url(../img/hotels-4014509_1920.jpg);
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    z-index: 100;
+}
+
+#barra {
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background: rgba(111, 222, 111, .5);
+    position: fixed;
+    color: #fff;
+    z-index: 100;
+}
+
+#barra h2 {
+    text-align: center;
+    line-height: 3;
+    font-size: 20px;
+}
+
+#barra li button{
+    text-align: center;
+    font-size: 18px;
+}
+
+#barra li {
+    list-style: none;
+    outline: 1px solid green;
+}
+
+.mover {
+    text-align: left;
+    width: 200px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: white;
+    text-decoration: none;
+    transition: all .50s ease;
+    font-size: 15px;
+}
+
+#barra li .mover:hover {
+    padding-top: 10px;
+    background-color: rgba(001,210,111, .7);
+}
+
+/* Fin estilo de barra*/

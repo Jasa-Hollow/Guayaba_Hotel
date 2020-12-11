@@ -1,4 +1,4 @@
-<?php 
+<?php
     /*
         Controlador encargado de mostrar al cliente la habitación seleccionada,
         e imprimir los datos de la habitación por medio de una card.

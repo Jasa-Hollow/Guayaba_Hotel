@@ -91,6 +91,43 @@
     // ------------------------------------------------------------------------------------------------
 
     // ------------------------------------------------------------------------------------------------
+    // Función para imprimir la tarjeta de habitación en la información de reserva.
+    function cardBooking($id_reserva, $id_fecha, $habitacion, $imgRoom, $fecha_inicial, $fecha_final, $state) {
+        ?>
+            <div class="card" style="text-align: center; margin-left: 2em; background-color: #071318;color: white;">
+                <div class="card-header" style="background-color: #005115;">
+                    <h5>Su habitación reservada: <?php echo $habitacion ; /* Tipo de habitación reservada. */?></h5>
+                </div>
+                <div class="card-body">
+                    <?php
+                        echo '<form id="room_cancel'. $id_reserva .'" method="post">' ;
+                    ?>
+                        <!-- Se almacenan los "id" correspondientes, para luego eliminarlo en caso de que el cliente lo solicite. -->
+                        <input type="hidden" name="id_reserva" value="<?php echo $id_reserva ; ?>">
+                        <input type="hidden" name="id_fecha" value="<?php echo $id_fecha ; ?>">
+
+                        <?php echo $imgRoom ; /* Impresión de la imagen de la habitación. */ ?>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Fecha inicial de reserva</h4>
+                                <p><?php echo $fecha_inicial ; /* Fecha inicial de la reserva. */?></p>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Fecha final de reserva</h4>
+                                <p><?php echo $fecha_final ; /* Fecha final de la reserva. */?></p>
+                            </div>
+                        </div>
+                        <h5>Estado de Reserva: <?php echo $state ; /* Estado de la reserva. */?></h5>
+                        <button type="submit" class="btn btn-danger" name="deleteReserva"> Cancelar Reserva</button>
+                    </form>
+                </div>
+            </div>
+            <br>
+        <?php
+    }
+    // ------------------------------------------------------------------------------------------------
+
+    // ------------------------------------------------------------------------------------------------
     //Función para imprimir los botones del carrusel.
     function carouselControl(){
         ?>

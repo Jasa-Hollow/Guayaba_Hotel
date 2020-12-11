@@ -1,20 +1,22 @@
 <script type="text/javascript">
+
 google.charts.load('current', {
     'packages': ['corechart']
-   });
-   google.charts.setOnLoadCallback(drawVisualization);
- 
-    function drawVisualization() {
+});
+
+google.charts.setOnLoadCallback(drawVisualization);
+
+function drawVisualization() {
     var clientes = parseInt('<?php echo $tclientes; ?>');
-    var habitaciones = parseInt('<?php echo $thabitacion; ?>');
-    // Some raw data (not necessarily accurate)
+    var reserva = parseInt('<?php echo $treserva; ?>');
+    
     var data = google.visualization.arrayToDataTable([
-    ['Clientes', 'habitaciones', 'clientes'],
-    ['', habitaciones,clientes ]
+    ['Clientes', 'Reservas', 'Clientes'],
+    ['', reserva,clientes ]
     ]);
     
     var options = {
-    title: 'Habitaciones y clientes',
+    title: 'Reservas y clientes',
     vAxis: {
     title: '',
     },
@@ -33,5 +35,5 @@ google.charts.load('current', {
     
     var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-   }
+}
 </script>

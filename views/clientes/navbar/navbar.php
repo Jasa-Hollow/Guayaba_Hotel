@@ -15,10 +15,16 @@
           <a class="nav-link" href="./index.php" style="color:#fff;"><i class="fas fa-home fa-2x"></i> Inicio<span class="sr-only">(current)</span></a>
         </li>
       </div>
-      
+
       <div class="d-none d-sm-none d-md-block">
         <li class="nav-item active" style="text-align: center;">
-          <a class="nav-link" href="./index.php" style="color:#fff;"><i class="fas fa-allergies fa-2x"></i> Ayuda<span class="sr-only">(current)</span></a>
+          <a class="nav-link" id="estadoReservaA" href="#" style="color:#fff;"><i class="fas fa-bed fa-2x"></i> Reserva </a>
+        </li>
+      </div>
+  
+      <div class="d-block d-sm-block d-md-none">
+        <li class="nav-item active">
+          <a class="nav-link" id="estadoReservaB" href="#" style="color:#fff;"><i class="fas fa-bed fa-2x"></i> Reserva </a>
         </li>
       </div>
       

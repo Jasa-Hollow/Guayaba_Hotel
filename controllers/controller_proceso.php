@@ -59,6 +59,26 @@
     // ------------------------------------------------------------------
 
     // ------------------------------------------------------------------
+    function deleteBooking($tabla, $campo, $id) {
+        $proceso = new Process();
+        $datos = $proceso->delete($tabla, $campo, $id);
+        
+        if ($datos) {
+            echo "<script>
+                    alertify.success('Datos eliminados de la tabla: " . $tabla . "');
+                </script>";
+        }
+        else {
+            echo "<script>
+                    alertify.error('Error al eliminar los datos de la tabla: " . $tabla . "');
+                </script>";
+        }
+
+        return $datos;
+    }
+    // ------------------------------------------------------------------
+
+    // ------------------------------------------------------------------
     function SelectPago()
 	{
 		$consultas = new Query();
@@ -101,6 +121,15 @@
         if ($datos){
             return $datos;
         }
+    }
+    // ------------------------------------------------------------------
+
+    // ------------------------------------------------------------------
+    // Función para consultar  los datos de los clientes.
+    function GetDataUser($tabla, $condicion) {
+        $consultas = new Query();
+        $datos = $consultas->queryUser($tabla,$condicion);
+        return $datos;
     }
     // ------------------------------------------------------------------
 ?>
