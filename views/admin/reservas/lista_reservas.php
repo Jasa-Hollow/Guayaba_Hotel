@@ -44,7 +44,7 @@
             </div>
         </div>
         <br>
-        <button type="button" id="imprimir" class="btn btn-danger"><i class="far fa-file-pdf"></i> Imprimir  </button>
+        <button type="button" id="imprimir_reservas" class="btn btn-danger"><i class="far fa-file-pdf"></i> Imprimir  </button>
     </div>
     <div class="col-md-1">
     </div>

@@ -91,6 +91,38 @@
     // ------------------------------------------------------------------------------------------------
 
     // ------------------------------------------------------------------------------------------------
+    // Función para imprimir la tarjeta de habitación en la información de reserva.
+    function cardBooking($id_reserva, $habitacion, $imgRoom, $fecha_inicial, $fecha_final, $state) {
+        ?>
+            <div class="card" style="text-align: center; margin-left: 2em; background-color: #071318;color: white;">
+                <div class="card-header" style="background-color: #005115;">
+                    <h5>Su habitación reservada: <?php echo $habitacion ; ?></h5>
+                </div>
+                <div class="card-body">
+                    <form action="#" method="post">
+                    <input type="hidden" name="id_reserva" value="<?php echo $id_reserva ; ?>">
+                    <?php echo $imgRoom ; ?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Fecha inicial de reserva</h4>
+                            <p><?php echo $fecha_inicial ; ?></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Fecha final de reserva</h4>
+                            <p><?php echo $fecha_final ; ?></p>
+                        </div>
+                    </div>
+                    <h5>Estado de Reserva: <?php echo $state ; ?></h5>
+                    <button class="btn btn-danger" name="deleteReserva"> Cancelar Reserva</button>
+                    </form>
+                </div>
+            </div>
+            <br>
+        <?php
+    }
+    // ------------------------------------------------------------------------------------------------
+
+    // ------------------------------------------------------------------------------------------------
     //Función para imprimir los botones del carrusel.
     function carouselControl(){
         ?>

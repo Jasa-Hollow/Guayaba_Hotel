@@ -1,5 +1,4 @@
 <?php 
-    <?php 
 	include '../../../models/conexion.php';
 	include '../../../models/login.php';
 	include '../../../models/consultas.php';

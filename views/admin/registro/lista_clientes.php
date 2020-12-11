@@ -11,24 +11,23 @@
                 Buscar por nombre
             </div>
             <div class="card-body">
-                <form id="idform1">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Nombre</span>
-                        </div>
-                        <input type="text" name="cliente" autocomplete="off" class="form-control" required="">
-                        
-                    </div>
-                    <button class="btn btn-info">Buscar</button>
-                </form>
-            </div>
+				<form id="idform1">
+					<div class="input-group mb-3">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1">Nombre</span>
+					</div>
+						<input type="text" name="cliente" class="form-control" autocomplete="off" placeholder="Nombre o ID" required="on">
+					</div>
+					<button class="btn btn-info">Buscar</button>
+				</form>
+			</div>
         </div>
         <br>
     </div>
-    <div class="col-md-9">
-        <div class="card">
+    <div class="col-md-9" style="text-align: center;">
+        <div class="card" id="lista_clientes">
             <div class="card-header" style="background-color: #212121;color: white;">
-                Lista Estudiantes
+                Lista Clientes
             </div>
             <div class="card-body">
                 <div id="data">
@@ -41,7 +40,7 @@
                                 <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Email</th>
-                                <th>Telefono</th>
+                                <th>Teléfono</th>
                                 <th>Dirección</th>
                             </tr>
                         </thead>
@@ -59,39 +58,13 @@
                             ?>
                         </tbody>
                     </table>
-                        <?php
-                            //Buscar por nombre o primera letra
-                            elseif  (isset($_POST['cliente'])): 
-                            $nombre = $_POST['cliente'];
-                        ?>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Email</th>
-                                        <th>Telefono</th>
-                                        <th>Direccion</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php
-                                    $datos = DataTable("clientes WHERE nombres LIKE '%$nombre%' OR apellidos LIKE '%$nombre%'");
-                                    if ($datos) 
-                                    {
-                                        include "cliente_datos.php";
-                                    } 
-                                    else 
-                                    {
-                                        echo '<div class="alert alert-warning">No hay clientes registrados.</div>';
-                                    }
-                                    ?>
-                                </tbody>
-                            </table>
-                    <?php endif ?>
+                        <?php endif;?> 
                 </div>
             </div>
         </div>
+        <br>
+        <button type="button" id="imprimir_clientes" class="btn btn-danger"><i class="far fa-file-pdf"></i> Imprimir </button>
     </div>
 </div>
+<script src="../../public/js/print_booking.js"></script>
 <br>

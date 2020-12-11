@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-12-2020 a las 02:38:48
+-- Tiempo de generación: 11-12-2020 a las 03:24:09
 -- Versión del servidor: 10.4.13-MariaDB
 -- Versión de PHP: 7.4.7
 
@@ -62,7 +62,8 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`id_cliente`, `nombres`, `apellidos`, `email`, `telefono`, `direccion`, `id_usuario`) VALUES
 (1, 'Hikari', 'Éden', 'hikahika@gmail.com', '', 'Coststeinz', 3),
 (2, 'Xenon', 'Hollow', 'xehi@gmail.com', '', 'Olocuilta', 2),
-(3, 'Joel Alexander', 'Sandoval', 'joel2262000@gmail.com', '1111-1111', 'Olocuilta', 4);
+(3, 'Joel Alexander', 'Sandoval', 'joel2262000@gmail.com', '1111-1111', 'Olocuilta', 4),
+(4, 'Karen', 'Méndez', 'leokaren@gmail.com', '6482-0572', 'Cuyultitán', 5);
 
 -- --------------------------------------------------------
 
@@ -224,16 +225,17 @@ CREATE TABLE `reserva` (
   `id_cliente` int(11) NOT NULL,
   `id_pago` int(11) NOT NULL,
   `id_habitacion` int(11) NOT NULL,
-  `id_fecha` int(11) NOT NULL
+  `id_fecha` int(11) NOT NULL,
+  `estado` int(11) NOT NULL DEFAULT 0 COMMENT '1: Reservada | 0: Sin reservar'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `reserva`
 --
 
-INSERT INTO `reserva` (`id_reserva`, `Ncuenta`, `id_cliente`, `id_pago`, `id_habitacion`, `id_fecha`) VALUES
-(1, '$2y$10$KMIp0yQXf2u7r/cOGC.MIu2OXlCgRzfTEloi6ytvPB2', 1, 3, 15, 1),
-(2, '$2y$10$Mi.kZ8Vu9kqiMuxj9vbHZ.kssHulE52u2oW9BBi/Hg8', 2, 2, 4, 2);
+INSERT INTO `reserva` (`id_reserva`, `Ncuenta`, `id_cliente`, `id_pago`, `id_habitacion`, `id_fecha`, `estado`) VALUES
+(1, '$2y$10$KMIp0yQXf2u7r/cOGC.MIu2OXlCgRzfTEloi6ytvPB2', 1, 3, 15, 1, 1),
+(2, '$2y$10$Mi.kZ8Vu9kqiMuxj9vbHZ.kssHulE52u2oW9BBi/Hg8', 2, 2, 4, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -255,8 +257,7 @@ CREATE TABLE `usuarios` (
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `password`, `tipo`) VALUES
 (1, 'jasa', '$2y$10$JxYuNYCmru8/ifx2xhRB3OLzXtldeATGi6Y4AIclqvOkqAcUeRvvq', 1),
 (2, 'xehi@gmail.com', '$2y$10$KWwv/Bxps.9SZb5pWz8ESu.UzkTCGBpLYmDDdRzrk2xz2jFHFXX7C', 2),
-(3, 'hikahika@gmail.com', '$2y$10$ON1zCfn8JvNhx6fOU6soeezlyQiRZ2qzC0t1igpsy1PYY4sqxyWc6', 2),
-(4, 'joel2262000@gmail.com', '$2y$10$ON1zCfn8JvNhx6fOU6soeezlyQiRZ2qzC0t1igpsy1PYY4sqxyWc6', 2);
+(3, 'hikahika@gmail.com', '$2y$10$ON1zCfn8JvNhx6fOU6soeezlyQiRZ2qzC0t1igpsy1PYY4sqxyWc6', 2);
 
 -- --------------------------------------------------------
 
@@ -357,7 +358,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `fecha`
 --
 ALTER TABLE `fecha`
-  MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_fecha` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `habitacion`
@@ -375,7 +376,7 @@ ALTER TABLE `modopago`
 -- AUTO_INCREMENT de la tabla `reserva`
 --
 ALTER TABLE `reserva`
-  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`

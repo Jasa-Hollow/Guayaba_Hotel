@@ -23,14 +23,6 @@
                 </li>
             </div>
 
-            <div class="d-none d-sm-none d-md-block">
-                <li class="nav-item active" style="text-align: center;">
-                    <a class="nav-link" href="./index.php" style="color:#fff; font-size: 20px;">
-                        <i class="fas fa-allergies "></i> Ayuda
-                        <span class="sr-only">(current)</span
-                            ></a>
-                </li>
-            </div>
         </ul>
         <ul style="list-style: none; font-size: 20px;">
             <div class="col-md-2">

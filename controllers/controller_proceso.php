@@ -103,4 +103,13 @@
         }
     }
     // ------------------------------------------------------------------
+
+    // ------------------------------------------------------------------
+    // Función para consultar  los datos de los clientes.
+    function GetDataUser($tabla, $condicion) {
+        $consultas = new Query();
+        $datos = $consultas->queryUser($tabla,$condicion);
+        return $datos;
+    }
+    // ------------------------------------------------------------------
 ?>

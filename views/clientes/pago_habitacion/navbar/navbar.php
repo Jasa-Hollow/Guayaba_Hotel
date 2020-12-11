@@ -16,10 +16,5 @@
         </li>
       </div>
       
-      <div class="d-none d-sm-none d-md-block">
-        <li class="nav-item active" style="text-align: center;">
-          <a class="nav-link" href="#" style="color:#fff;"><i class="fas fa-allergies fa-2x"></i> Ayuda<span class="sr-only">(current)</span></a>
-        </li>
-      </div>
   </div>
 </nav>

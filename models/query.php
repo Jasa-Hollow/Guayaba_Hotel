@@ -112,6 +112,31 @@
 			return $rows;
         }
 
+        // Función para llamar el registro de la reserva, que el cliente ha reservado en la BD.
+        public function queryClientBooking($cliente){
+            $rows = null;
+			$modelo = new ConexionBD();
+			$conexion = $modelo->get_conexion();
+			$sql = "SELECT id_reserva, estado, 
+                    habitacion.tipo, habitacion.img_room,
+                    fecha.fecha_inicial, fecha.fecha_final 
+                    FROM `reserva` 
+                    INNER JOIN clientes ON reserva.id_cliente = clientes.id_cliente 
+                    INNER JOIN modopago ON reserva.id_pago = modopago.id_pago
+                    INNER JOIN habitacion ON reserva.id_habitacion = habitacion.id_habitacion
+                    INNER JOIN fecha ON reserva.id_fecha = fecha.id_fecha
+                    WHERE clientes.email = '$cliente'
+                    ORDER BY id_reserva"; // Consulta a la tabla de reservas, para traer toda la información necesaria.
+			$statement = $conexion->prepare($sql);
+			$statement->execute();
+
+			while ($result = $statement->fetch())
+			{
+				$rows[] = $result;
+			}
+			return $rows;
+        }
+
         //Funcion para consultar pago.
         public function listaPago()
 		{

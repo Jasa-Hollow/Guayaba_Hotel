@@ -12,14 +12,19 @@
         $tclientes = $result['tclientes'];
     }
 
-    $ContHabitacion =  $conexion->query("SELECT count(id_habitacion) AS thabitacion FROM habitacion");
+    $Contreserva =  $conexion->query("SELECT count(id_reserva) AS treserva FROM reserva");
 
-    foreach ($ContHabitacion as $result) {
-        $thabitacion = $result['thabitacion'];
+    foreach ($Contreserva as $result) {
+        $treserva = $result['treserva'];
     }
     include "barra.php";
     
-    ?>    
-    <div id="chart_div">
-        
+    ?>
+    <div style="text-align: center;">
+        <div id="chart_div">
+
+        </div>
+        <br>
+        <button type="button" id="imprimir_grafico" class="btn btn-danger"><i class="far fa-file-pdf"></i> Imprimir  </button>
     </div>
+    <script src="../../public/js/print_booking.js"></script>
