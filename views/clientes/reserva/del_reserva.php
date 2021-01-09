@@ -2,6 +2,7 @@
 
     // ---------------------------------------------------------------------------------
     // Archivos para la conexión a la base de datos e eliminar datos en esta.
+    include '../../../.env.php';
     include '../../../models/conexion.php';
     include '../../../models/process.php';
     include '../../../controllers/controller_proceso.php';

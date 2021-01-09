@@ -7,10 +7,12 @@
 
     //Se llaman los archivos de conexión y consulta a la base de datos.
     if ($_SESSION['usuario']){ // Sí existe, quiere decir que está dentro de las vistas.
+        include "../../.env.php";
         include "../../models/conexion.php";
         include "../../models/query.php";
     }
     else{ // Sí no existe, está en el index, por lo tanto, se cambia la dirección.
+        include "./.env.php";
         include "./models/conexion.php";
         include "./models/query.php";
     }

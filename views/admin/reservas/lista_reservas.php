@@ -1,4 +1,5 @@
 <?php
+    include '../../../.env.php';
     include '../../../models/conexion.php';
     include '../../../controllers/controller_proceso.php';
     include '../../../models/query.php';

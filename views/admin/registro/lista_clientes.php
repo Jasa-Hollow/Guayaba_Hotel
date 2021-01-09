@@ -1,5 +1,6 @@
 <script src="../../public/js/procesos_form.js"></script>
 <?php
+    include '../../../.env.php';
     include '../../../models/conexion.php';
     include '../../../controllers/controller_proceso.php';
     include '../../../models/query.php';

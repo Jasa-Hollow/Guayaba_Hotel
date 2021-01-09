@@ -4,6 +4,7 @@
         e imprimir su estado actual.
     */
 
+    include "../../../.env.php";
     include "../../../models/conexion.php";
     include "../../../models/query.php";
     include "../../../controllers/rooms/structure.php";

@@ -7,7 +7,8 @@
     <script src="../../public/js/bootstrap-datepicker.min.js"></script>
     <scrip src="../../public/js/bootstrap-datepicker.es.min.js"></scrip>
 </head>
-<?php 
+<?php
+    include '../../../.env.php';
 	include '../../../models/conexion.php';
 	include '../../../models/query.php';
 	include '../../../controllers/controller_proceso.php';

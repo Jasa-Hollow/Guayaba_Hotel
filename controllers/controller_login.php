@@ -1,6 +1,7 @@
 <?php 
 
-    /* Primero se incluyen los archivos que vamos a utilizar. */ 
+    /* Primero se incluyen los archivos que vamos a utilizar. */
+    include '../.env.php';
     include '../models/conexion.php';
     include '../models/login.php';
 

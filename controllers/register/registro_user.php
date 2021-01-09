@@ -2,6 +2,7 @@
 <?php 
     // ---------------------------------------------------------------------------------
     // Archivos para la conexión a la base de datos e insertar datos en esta.
+    include '../../.env.php';
     include '../../models/conexion.php';
     include '../../models/query.php';
     include '../controller_proceso.php';

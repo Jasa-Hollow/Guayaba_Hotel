@@ -4,6 +4,7 @@
 	$redic = new Rd();
     $redic->Cliente();
     
+    include "../../.env.php";
     include "../../models/conexion.php";
     include "../../models/query.php";
     include "./structure.php";
