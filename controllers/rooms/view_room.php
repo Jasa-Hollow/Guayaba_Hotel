@@ -10,7 +10,7 @@
 
         $consulta = new Query();
         $condicion = " WHERE id_habitacion = '$id_habitacion'"; // Condición de la consulta a la BD.
-        $data = $consulta->queryRoom($condicion);
+        $data = $consulta->queryer("SELECT * FROM habitacion $condicion");
         
         foreach ($data as $result){
             $img_name = $result['img_room'];
