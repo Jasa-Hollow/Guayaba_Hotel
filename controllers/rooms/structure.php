@@ -5,7 +5,7 @@
     */
 
     // ------------------------------------------------------------------------------------------------
-    function printForm($id_habitacion, $id_cliente, $idForm){ // Función para imprimir un formulario dependiendo sí se ha iniciado sesión o no
+    function printForm($id_habitacion, $id_cliente, $idForm) { // Función para imprimir un formulario dependiendo sí se ha iniciado sesión o no
         if ($_SESSION['usuario']){ // Sí existe, quiere decir que está dentro de las vistas.
             ?>
             <form id="<?php echo $idForm; ?>" method="POST"> <!-- En este caso, por medio de un callback, se define el id del formulario. -->
@@ -27,8 +27,7 @@
 
     // ------------------------------------------------------------------------------------------------
     // Función para imprimir las tarjetas en el carrusel.
-    function structure($id_habitacion, $id_cliente, $type, $description, $capacity, $img, $idForm)
-    {
+    function structure($id_habitacion, $id_cliente, $type, $description, $capacity, $img, $idForm) {
     ?>
         <div class="card" style="width: 20rem; margin-left: 2em; background-color: #071318;color: white;">
             <div class="card-header" style="text-align: center; background-color: #005115;">
@@ -48,7 +47,7 @@
 
     // ------------------------------------------------------------------------------------------------
     // Función para imprimir las tarjetas de las habitaciones por su tipo.
-    function structureByType($id_habitacion, $id_cliente, $type, $description, $capacity, $img, $idForm){
+    function structureByType($id_habitacion, $id_cliente, $type, $description, $capacity, $img, $idForm) {
     ?>
         <div class="card" style="text-align: center; margin-left: 2em; margin-bottom: 2em; background-color: #071318;color: white;">
             <div class="card-header" style="background-color: #005115;">
@@ -71,7 +70,7 @@
 
     // ------------------------------------------------------------------------------------------------
     // Función para imprimir la tarjeta de habitación en el formulario de pago.
-    function cardRoom($type, $description, $capacity, $img){
+    function cardRoom($type, $description, $capacity, $img) {
     ?>
         <div class="card" style="text-align: center; margin-left: 2em; background-color: #071318;color: white;">
             <div class="card-header" style="background-color: #005115;">

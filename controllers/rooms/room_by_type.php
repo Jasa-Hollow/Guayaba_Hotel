@@ -8,7 +8,6 @@
     include "../../models/conexion.php";
     include "../../models/query.php";
     include "./structure.php";
-    
 
     $id_tipo = $_GET['id_tipo'];
 
@@ -17,7 +16,8 @@
         if ($_SESSION['usuario']){
             $consulta = new Query();
             $user = $_SESSION['usuario'];
-            $data = $consulta->queryUser("clientes", "email = '$user'"); // Consulta a la BD que trae los registros de los clientes.
+            $tabla = "clientes"; $condicion = "email = '$user'";
+            $data = $consulta->queryer("SELECT * FROM $tabla WHERE $condicion"); // Consulta a la BD que trae los registros de los clientes.
 
             foreach ($data as $result){
                 $id_cliente = $result['id_cliente']; // Sólo se trae el ID del cliente que ha iniciado sesión en ese momento.
@@ -37,7 +37,7 @@
     
     function typeRoom($tabla, $idForm){
         $consulta = new Query();
-        $data = $consulta->allRegister($tabla);
+        $data = $consulta->queryer("SELECT * FROM $tabla");
 
         if ($data){
             $i = 1;

@@ -22,7 +22,8 @@
         if ($_SESSION['usuario']){
             $consulta = new Query();
             $user = $_SESSION['usuario'];
-            $data = $consulta->queryUser("clientes", "email = '$user'"); // Consulta a la BD que trae los registros de los clientes.
+            $tabla = "clientes"; $condicion = "email = '$user'";
+            $data = $consulta->queryer("SELECT * FROM $tabla WHERE $condicion"); // Consulta a la BD que trae los registros de los clientes.
 
             foreach ($data as $result){
                 $id_cliente = $result['id_cliente']; // Sólo se trae el ID del cliente que ha iniciado sesión en ese momento.
@@ -51,7 +52,7 @@
         //Se almacena en una variable la consulta definida en "models/query.php"
         $consulta = new Query();
         $condicion = ""; // Por el momento, la "condición" se define como vacía.
-        $data = $consulta->queryRoom($condicion);
+        $data = $consulta->queryer("SELECT * FROM habitacion $condicion");
 
         //Líneas para generar aleatoriamente el "id" de la habitación que se imprimirá en cada card.
         $room1 = rand(1,3); $room2 = rand(4,6); $room3 = rand(7,9); 
@@ -152,6 +153,6 @@
             }
         }
         // Sí la consulta no fue exitosa, se realiza la siguiente acción.
-        else{ echo '<div class="alert-danger"> No existen datos en la tabla "habitacion" </div>'; }
+        else { echo '<div class="alert-danger"> No existen datos en la tabla "habitacion" </div>'; }
     }
 ?>

@@ -1,7 +1,7 @@
 <?php
 
     Class Environment {
-        // Prueba...
+        // Información de la conexión a la BD.
         public $user = "YOUR USER NAME";
         public $pass = "PASSWORD";
         public $host = "HOST NAME";
