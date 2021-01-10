@@ -7,7 +7,7 @@
     include '../../../controllers/controller_proceso.php';
     // ---------------------------------------------------------------------------------
 ?>
-<link rel="stylesheet" href="./public/css/styl.css">
+<link rel="stylesheet" href="./public/css/style.css">
 
 <script src="./public/js/procesos_form.js"></script>
 
