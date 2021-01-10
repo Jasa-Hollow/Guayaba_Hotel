@@ -10,7 +10,7 @@
     <?php include './views/layouts/head.php'; ?>
     <body>
         <?php 
-            include './views/index_nav/navbar.php';
+            include './views/layouts/nav.php';
             
             if(isset($_GET['mensaje'])) {
                 $mensaje = base64_decode($_GET['mensaje']);
@@ -32,9 +32,7 @@
             <h2 class="title2">¡Disfruta de las promociones que te ofrece nuestro hotel!</h2><br><br>
             <!-- ...................................................................................... -->
             <!-- Carrusel con las cards de la habitaciones -->
-            <div id="cr">
-                <?php include './views/layouts/carousel.php'; ?>
-            </div>
+            <div id="cr"> <?php include './views/layouts/carousel.php'; ?> </div>
             <!-- ...................................................................................... -->
         </div>
         <?php include './views/clientes/modal/sesion.php'; ?>

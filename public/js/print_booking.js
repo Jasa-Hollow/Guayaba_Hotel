@@ -18,7 +18,7 @@ function printElement(element, docTitle, horafecha) {
     
     // Se enlaza con los estilos que se desea que tenga.
     ventana.document.write('<link rel="stylesheet" href="../../public/css/bootstrap.min.css">');
-    ventana.document.write('<link rel="stylesheet" href="../../public/css/styl.css">');
+    ventana.document.write('<link rel="stylesheet" href="../../public/css/style.css">');
 
     // Cabecera y cuerpo del documento que se obtiene por medio del elemento seleccionado.
     ventana.document.write('</head><body >');
